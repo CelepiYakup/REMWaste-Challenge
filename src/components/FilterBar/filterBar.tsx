@@ -53,30 +53,32 @@ const FilterBar: React.FC<FilterBarProps & { sizes: number[] }> = ({
         </select>
       </div>
 
-      <div className="checkbox-container">
-        <label className="checkbox-label">
-          <input
-            type="checkbox"
-            checked={filterState.allowedOnRoad}
-            onChange={(e) => handleCheckboxChange("allowedOnRoad", e.target.checked)}
-            className="checkbox-input"
-          />
-          <span className="checkbox-custom"></span>
-          <span className="checkbox-text">Allowed on Road</span>
-        </label>
-      </div>
+      <div className="checkbox-row">
+        <div className="checkbox-container">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={filterState.allowedOnRoad}
+              onChange={(e) => handleCheckboxChange("allowedOnRoad", e.target.checked)}
+              className="checkbox-input"
+            />
+            <span className="checkbox-custom"></span>
+            <span className="checkbox-text">Allowed on Road</span>
+          </label>
+        </div>
 
-      <div className="checkbox-container">
-        <label className="checkbox-label">
-          <input
-            type="checkbox"
-            checked={filterState.heavyWaste}
-            onChange={(e) => handleCheckboxChange("heavyWaste", e.target.checked)}
-            className="checkbox-input"
-          />
-          <span className="checkbox-custom"></span>
-          <span className="checkbox-text">Allows Heavy Waste</span>
-        </label>
+        <div className="checkbox-container">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={filterState.heavyWaste}
+              onChange={(e) => handleCheckboxChange("heavyWaste", e.target.checked)}
+              className="checkbox-input"
+            />
+            <span className="checkbox-custom"></span>
+            <span className="checkbox-text">Allows Heavy Waste</span>
+          </label>
+        </div>
       </div>
 
       <button onClick={handleResetFilters} className="reset-button">

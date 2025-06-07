@@ -231,6 +231,17 @@
     flex: 1;
     min-width: 80px;
   }
+  .checkbox-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .checkbox-container {
+    flex: 0 0 auto;
+  }
   
   .checkbox-custom {
     width: 16px;
@@ -253,7 +264,6 @@
   }
 }
 
-/* Desktop Responsive - 1024px and up */
 @media (min-width: 1024px) {
   .page-header {
     padding: 48px 0;
@@ -283,7 +293,6 @@
   }
 }
 
-/* Extra small screens - below 480px */
 @media (max-width: 480px) {
   .page-header {
     padding: 24px 0;

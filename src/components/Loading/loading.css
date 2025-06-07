@@ -8,13 +8,18 @@
 
 .loading-content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loading-spinner {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 64px;
   height: 64px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
 }
 
 .spinner {

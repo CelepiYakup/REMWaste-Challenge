@@ -19,7 +19,6 @@ const ChooseSkipPage: React.FC = () => {
 
   const handleContinue = () => {
     if (selectedSkip) {
-      console.log('Continuing with skip:', selectedSkip);
     }
   };
 
