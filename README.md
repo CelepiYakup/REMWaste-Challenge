@@ -1,4 +1,4 @@
-![REMWaste Logo](public/images/ramwaste.svg)
+<img src="public/images/ramwaste.svg" alt="REMWaste Logo" width="50%" />
 
 # REMWaste Challenge
 
@@ -29,7 +29,6 @@ Then open your browser and go to [http://localhost:5173](http://localhost:5173) 
 - React
 - Vite
 - TypeScript
-- Tailwind CSS
 - ESLint
 
 ---
