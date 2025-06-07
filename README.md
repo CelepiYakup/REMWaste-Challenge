@@ -1,32 +1,30 @@
+![REMWaste Logo](public/images/ramwaste.svg)
+
 # REMWaste Challenge
 
-author: [Senin Adın]
+**Author:** Yakup Celepi
 
-Bu proje, REMWaste için hazırlanmış bir demo uygulamadır. Kullanıcılar konteyner (skip) seçimi yapabilir, filtreleyebilir ve detaylarını görüntüleyebilir. Uygulama, modern bir arayüz ve kolay kullanılabilirlik hedeflenerek geliştirilmiştir.
+This project is a demo application prepared for REMWaste. Users can select, filter, and view details of containers (skips). The application is developed with a modern interface and aims for ease of use.
 
 ---
 
-## Geliştirme Ortamı Kurulumu
+## Development Environment Setup
 
-Projeyi çalıştırmak için bilgisayarınızda Node.js ve npm kurulu olmalıdır. Eğer kurulu değilse, [Node.js](https://nodejs.org/) sitesinden indirebilirsiniz.
+To run the project, you need Node.js and npm installed on your computer. If you don't have them installed, you can download them from the [Node.js website](https://nodejs.org/).
 
-Proje dosyalarını indirdikten sonra terminali proje klasöründe açıp aşağıdaki komutu çalıştırın:
-
+After downloading the project files, open a terminal in the project folder and run:
 ```sh
 npm install
 ```
-
-Projeyi başlatmak için:
-
+To start the project, run:
 ```sh
 npm run dev
 ```
-
-Ardından tarayıcınızda [http://localhost:5173](http://localhost:5173) adresine giderek projeyi görebilirsiniz.
+Then open your browser and go to [http://localhost:5173](http://localhost:5173) to view the project.
 
 ---
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
 - React
 - Vite
@@ -36,42 +34,40 @@ Ardından tarayıcınızda [http://localhost:5173](http://localhost:5173) adresi
 
 ---
 
-## Klasör Yapısı
+## Folder Structure
 
-Proje aşağıdaki gibi yapılandırılmıştır:
+The project is organized as follows:
 
 ```
-frontend/                Projenin kök klasörü
+frontend/                Root folder of the project
 │
-├── public/              Statik dosyalar (görseller, favicon, vs.)
-│   └── images/          Projede kullanılan konteyner görselleri
+├── public/              Static files (images, favicon, etc.)
+│   └── images/          Container images used in the project
 │
-├── src/                 Ana kaynak kodları
-│   ├── assets/          Görseller, ikonlar vb. kaynaklar
-│   ├── components/      Tekrar kullanılabilir arayüz bileşenleri
-│   ├── hooks/           Özel React hook'ları
-│   ├── pages/           Sayfa bileşenleri
-│   ├── service/         API ve veri servisleri
-│   ├── types/           Tip tanımlamaları (TypeScript)
-│   ├── App.tsx          Ana uygulama bileşeni
-│   ├── main.tsx         Uygulamanın giriş noktası
-│   └── vite-env.d.ts    Vite için tip tanımlamaları
+├── src/                 Main source code
+│   ├── assets/          Images, icons, and other resources
+│   ├── components/      Reusable UI components
+│   ├── hooks/           Custom React hooks
+│   ├── pages/           Page components
+│   ├── service/         API and data services
+│   ├── types/           TypeScript type definitions
+│   ├── App.tsx          Main application component
+│   ├── main.tsx         Entry point of the application
+│   └── vite-env.d.ts    Type definitions for Vite
 │
-├── package.json         Proje bağımlılıkları ve scriptler
-├── tsconfig.json        TypeScript yapılandırması
-├── vite.config.ts       Vite yapılandırması
-└── README.md            Proje dokümantasyonu
+├── package.json         Project dependencies and scripts
+├── tsconfig.json        TypeScript configuration
+├── vite.config.ts       Vite configuration
+└── README.md            Project documentation
 ```
 
 ---
 
-## Ek Açıklamalar
+## Additional Notes
 
-- Tüm API istekleri `src/service/` klasöründe tanımlanmıştır.
-- Tailwind CSS ile modern ve responsive bir arayüz sağlanmıştır.
-- Proje, Vite ile hızlı geliştirme ve derleme deneyimi sunar.
-- ESLint ile kod kalitesi ve tutarlılığı korunur.
+- All API requests are defined in the `src/service/` folder.
+- Tailwind CSS is used to provide a modern and responsive interface.
+- Vite offers a fast development and build experience.
+- ESLint ensures code quality and consistency.
 
----
-
-Herhangi bir sorunla karşılaşırsanız veya katkıda bulunmak isterseniz, lütfen bir issue açın veya pull request gönderin.
+If you encounter any issues or would like to contribute, please open an issue or submit a pull request.
