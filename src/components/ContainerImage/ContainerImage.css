@@ -1,0 +1,268 @@
+.container-image-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin: 8px;
+  animation: materializeFromParticles 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  perspective: 1000px;
+}
+
+@keyframes materializeFromParticles {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotateY(180deg) rotateX(45deg);
+    filter: blur(20px) brightness(0.3);
+  }
+  30% {
+    opacity: 0.7;
+    transform: scale(0.8) rotateY(90deg) rotateX(20deg);
+    filter: blur(10px) brightness(0.7);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1) rotateY(-10deg) rotateX(-5deg);
+    filter: blur(2px) brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg) rotateX(0deg);
+    filter: blur(0px) brightness(1);
+  }
+}
+
+@keyframes quantumLevitation {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateX(2deg);
+  }
+}
+
+.container-image-wrapper .container-image {
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  display: block;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.2));
+  animation: quantumLevitation 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.container-image-wrapper .waste-container-small {
+  max-width: 220px;
+  animation-delay: 0.1s;
+}
+
+.container-image-wrapper .waste-container-medium {
+  max-width: 200px;
+  animation-delay: 0.3s;
+}
+
+.container-image-wrapper .waste-container-large {
+  max-width: 220px;
+  animation-delay: 0.5s;
+}
+
+.container-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: energyField 3s linear infinite;
+  opacity: 0;
+  z-index: -1;
+  filter: blur(15px);
+  background: linear-gradient(45deg, 
+    rgba(59, 130, 246, 0.3), 
+    rgba(139, 92, 246, 0.3), 
+    rgba(236, 72, 153, 0.3)
+  );
+}
+
+@keyframes energyField {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.container-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(245, 158, 11, 0.1) 75%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: pulseRipple 3s ease-in-out infinite;
+  z-index: -2;
+  opacity: 0;
+}
+
+@keyframes pulseRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.skip-card:hover .container-image-wrapper::after {
+  animation: pulseRippleHover 1s ease-out infinite;
+}
+
+@keyframes pulseRippleHover {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+.skip-card:hover .container-image-wrapper::before {
+  animation: energyFieldHover 0.8s ease-out infinite;
+  opacity: 1;
+}
+
+@keyframes energyFieldHover {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.container-image-wrapper.selected::after {
+  animation: selectedRipple 1.2s ease-in-out infinite;
+}
+
+@keyframes selectedRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.container-image-wrapper.selected::before {
+  animation: selectedEnergyField 1.5s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes selectedEnergyField {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.container-overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.container-brand-text {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .container-image-wrapper .waste-container-small,
+  .container-image-wrapper .waste-container-medium,
+  .container-image-wrapper .waste-container-large {
+    max-width: 180px;
+    width: 180px;
+    height: auto;
+  }
+
+  .container-image-wrapper .container-brand-text {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+  }
+
+  .container-image-wrapper::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .container-image-wrapper .container-brand-text {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+
+@media (prefers-contrast: high) {
+  .container-image-wrapper .container-brand-text {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #ffffff;
+  }
+}
+
+
+@media print {
+  .container-image-wrapper .container-overlay-text {
+    display: none;
+  }
+  
+  .container-image-wrapper::before,
+  .container-image-wrapper::after {
+    display: none;
+  }
+}

@@ -1,0 +1,241 @@
+.selection-bar {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #1f2937;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 16px; 
+}
+
+.selection-bar > div,
+.selection-bar > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.selection-bar .icon-segment {
+  background-color: rgba(31, 41, 55, 0.8);
+  padding: 16px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.selection-bar .icon-segment .truck-icon-bar {
+  width: 24px;
+  height: 24px;
+  color: #9ca3af;
+}
+
+
+.selection-bar .info-segment {
+  background-color: #111827; 
+  flex: 1;
+  padding: 16px 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selection-bar .info-segment .info-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.selection-bar .info-segment .info-subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+
+.selection-bar .price-segment {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 16px 32px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+.selection-bar .arrow-segment {
+  background-color: #ffffff;
+  padding: 16px 24px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selection-bar .arrow-segment .arrow-icon-bar {
+  width: 20px;
+  height: 20px;
+  color: #111827;
+}
+
+
+@media (max-width: 640px) {
+  .selection-bar {
+    padding: 0 8px 8px;
+  }
+  .selection-bar .icon-segment {
+    padding: 12px;
+  }
+  .selection-bar .info-segment {
+    padding: 12px 16px;
+  }
+  .selection-bar .price-segment {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  .selection-bar .arrow-segment {
+    padding: 12px 16px;
+  }
+}
+
+.animated-selection-bar {
+  animation: slideUpFromBottom 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: bottom;
+}
+
+@keyframes slideUpFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.selection-bar .icon-segment {
+  animation: iconBounce 0.8s ease-out 0.2s both;
+}
+
+@keyframes iconBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-180deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.selection-bar .info-segment {
+  animation: slideInLeft 0.6s ease-out 0.3s both;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.selection-bar .price-segment {
+  animation: priceGlow 0.8s ease-out 0.4s both;
+}
+
+@keyframes priceGlow {
+  0% {
+    opacity: 0;
+    background-color: #1f2937;
+    transform: scale(0.8);
+  }
+  50% {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    background-color: #2563eb;
+    transform: scale(1);
+  }
+}
+
+.selection-bar .arrow-segment {
+  animation: arrowPulse 0.6s ease-out 0.5s both;
+  cursor: pointer;
+}
+
+@keyframes arrowPulse {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.8);
+  }
+  70% {
+    transform: translateX(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.selection-bar .arrow-segment:hover {
+  animation: arrowHover 0.3s ease-in-out infinite alternate;
+  background-color: #f3f4f6;
+}
+
+@keyframes arrowHover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+.selection-bar .arrow-segment:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.selection-bar .truck-icon-bar {
+  animation: truckMove 2s ease-in-out infinite;
+}
+
+@keyframes truckMove {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.selection-bar .info-title {
+  animation: textFadeIn 0.5s ease-out 0.6s both;
+}
+
+.selection-bar .info-subtitle {
+  animation: textFadeIn 0.5s ease-out 0.7s both;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

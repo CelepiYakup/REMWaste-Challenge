@@ -1,0 +1,92 @@
+.progress-steps {
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
+}
+
+.progress-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.steps-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+}
+
+.step-content.completed {
+  color: #60a5fa;
+}
+
+.step-content.active {
+  color: #ffffff;
+}
+
+.step-content.inactive {
+  color: #6b7280;
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.step-icon.completed {
+  background-color: #2563eb;
+}
+
+.step-icon.active {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.step-icon.inactive {
+  background-color: #374151;
+}
+
+.step-icon .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.step-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .step-name {
+    display: block;
+  }
+}
+
+.step-divider {
+  width: 32px;
+  height: 1px;
+  background-color: #4b5563;
+  margin: 0 16px;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .step-divider {
+    display: block;
+  }
+}
