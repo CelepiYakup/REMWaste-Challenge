@@ -1,6 +1,6 @@
 .page-header {
   background-color: #111827;
-  padding: 48px 0;
+  padding: 32px 0;
 }
 
 .header-container {
@@ -17,15 +17,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .sparkles-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   color: #60a5fa;
-  margin-right: 12px;
+  margin-right: 8px;
   animation: pulse 2s infinite;
+  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -34,20 +36,17 @@
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
-}
-
-@media (min-width: 768px) {
-  .page-title {
-    font-size: 3rem;
-  }
+  line-height: 1.2;
 }
 
 .page-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #9ca3af;
   max-width: 512px;
   margin: 0 auto;
+  line-height: 1.4;
+  padding: 0 8px;
 }

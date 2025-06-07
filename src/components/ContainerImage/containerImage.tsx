@@ -1,5 +1,4 @@
 import React from "react";
-
 import greenContainer from "/images/green-container.svg";
 import redContainer from "/images/red-container.svg";
 import yellowContainer from "/images/yellow-container.svg";

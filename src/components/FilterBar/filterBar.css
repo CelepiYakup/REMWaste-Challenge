@@ -7,18 +7,32 @@
   gap: 24px;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-item {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .filter-item label {
   color: #ffffff;
   font-weight: 500;
   font-size: 0.875rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .filter-item select {
@@ -30,6 +44,7 @@
   font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  min-width: 100px;
 }
 
 .filter-item select:hover {
@@ -77,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .checkbox-custom::after {
@@ -135,6 +151,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .reset-button:hover {
@@ -146,4 +163,178 @@
   outline: none;
   border-color: #2563eb;
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Tablet Responsive - 640px to 1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .page-header {
+    padding: 40px 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .sparkles-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .filter-bar {
+    padding: 16px;
+    gap: 20px;
+  }
+  
+  .filter-item label {
+    font-size: 0.875rem;
+  }
+  
+  .filter-item select {
+    font-size: 0.875rem;
+    padding: 6px 8px;
+  }
+  
+  .checkbox-text {
+    font-size: 0.875rem;
+  }
+  
+  .reset-button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Responsive - below 640px */
+@media (max-width: 640px) {
+  .filter-bar {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .filter-item {
+    gap: 6px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .filter-item label {
+    font-size: 0.8rem;
+  }
+  
+  .filter-item select {
+    font-size: 0.8rem;
+    padding: 8px 6px;
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .checkbox-custom {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .checkbox-custom::after {
+    width: 4px;
+    height: 7px;
+  }
+  
+  .checkbox-text {
+    font-size: 0.8rem;
+  }
+  
+  .reset-button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Desktop Responsive - 1024px and up */
+@media (min-width: 1024px) {
+  .page-header {
+    padding: 48px 0;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .sparkles-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+  
+  .header-title-section {
+    margin-bottom: 16px;
+  }
+  
+  .filter-bar {
+    padding: 16px;
+    gap: 24px;
+  }
+}
+
+/* Extra small screens - below 480px */
+@media (max-width: 480px) {
+  .page-header {
+    padding: 24px 0;
+  }
+  
+  .header-container {
+    padding: 0 12px;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .sparkles-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+  
+  .filter-bar {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  
+  .filter-item {
+    gap: 4px;
+    max-width: 260px;
+  }
+  
+  .filter-item label {
+    font-size: 0.75rem;
+  }
+  
+  .filter-item select {
+    font-size: 0.75rem;
+    padding: 6px 4px;
+    min-width: 70px;
+  }
+  
+  .checkbox-text {
+    font-size: 0.75rem;
+  }
+  
+  .reset-button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
 }
