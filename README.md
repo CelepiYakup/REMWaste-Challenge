@@ -1,55 +1,77 @@
-# React + TypeScript + Vite
+# REMWaste Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+author: [Senin Adın]
 
-Currently, two official plugins are available:
+Bu proje, REMWaste için hazırlanmış bir demo uygulamadır. Kullanıcılar konteyner (skip) seçimi yapabilir, filtreleyebilir ve detaylarını görüntüleyebilir. Uygulama, modern bir arayüz ve kolay kullanılabilirlik hedeflenerek geliştirilmiştir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Geliştirme Ortamı Kurulumu
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Projeyi çalıştırmak için bilgisayarınızda Node.js ve npm kurulu olmalıdır. Eğer kurulu değilse, [Node.js](https://nodejs.org/) sitesinden indirebilirsiniz.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Proje dosyalarını indirdikten sonra terminali proje klasöründe açıp aşağıdaki komutu çalıştırın:
+
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Projeyi başlatmak için:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run dev
 ```
-# REMWaste-Challenge
+
+Ardından tarayıcınızda [http://localhost:5173](http://localhost:5173) adresine giderek projeyi görebilirsiniz.
+
+---
+
+## Kullanılan Teknolojiler
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- ESLint
+
+---
+
+## Klasör Yapısı
+
+Proje aşağıdaki gibi yapılandırılmıştır:
+
+```
+frontend/                Projenin kök klasörü
+│
+├── public/              Statik dosyalar (görseller, favicon, vs.)
+│   └── images/          Projede kullanılan konteyner görselleri
+│
+├── src/                 Ana kaynak kodları
+│   ├── assets/          Görseller, ikonlar vb. kaynaklar
+│   ├── components/      Tekrar kullanılabilir arayüz bileşenleri
+│   ├── hooks/           Özel React hook'ları
+│   ├── pages/           Sayfa bileşenleri
+│   ├── service/         API ve veri servisleri
+│   ├── types/           Tip tanımlamaları (TypeScript)
+│   ├── App.tsx          Ana uygulama bileşeni
+│   ├── main.tsx         Uygulamanın giriş noktası
+│   └── vite-env.d.ts    Vite için tip tanımlamaları
+│
+├── package.json         Proje bağımlılıkları ve scriptler
+├── tsconfig.json        TypeScript yapılandırması
+├── vite.config.ts       Vite yapılandırması
+└── README.md            Proje dokümantasyonu
+```
+
+---
+
+## Ek Açıklamalar
+
+- Tüm API istekleri `src/service/` klasöründe tanımlanmıştır.
+- Tailwind CSS ile modern ve responsive bir arayüz sağlanmıştır.
+- Proje, Vite ile hızlı geliştirme ve derleme deneyimi sunar.
+- ESLint ile kod kalitesi ve tutarlılığı korunur.
+
+---
+
+Herhangi bir sorunla karşılaşırsanız veya katkıda bulunmak isterseniz, lütfen bir issue açın veya pull request gönderin.
