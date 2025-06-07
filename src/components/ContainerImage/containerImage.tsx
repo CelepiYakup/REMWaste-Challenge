@@ -3,7 +3,7 @@ import React from "react";
 import greenContainer from "/images/green-container.svg";
 import redContainer from "/images/red-container.svg";
 import yellowContainer from "/images/yellow-container.svg";
-import "./containerImage.css";
+import "../ContainerImage/ContainerImage.css";
 
 interface ContainerImageProps {
   size: number;
