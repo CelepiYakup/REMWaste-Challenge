@@ -9,7 +9,7 @@ const PageHeader: React.FC = () => {
         <div className="header-content">
           <div className="header-title-section">
             <Sparkles className="sparkles-icon" />
-            <h1 className="page-title">Choose Your Skip Size</h1>
+            <h1 className="page-title">Selam Ensar</h1>
           </div>
           <p className="page-subtitle">
             Select the skip size that best suits your needs

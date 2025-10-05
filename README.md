@@ -65,7 +65,6 @@ frontend/                Root folder of the project
 ## Additional Notes
 
 - All API requests are defined in the `src/service/` folder.
-- Tailwind CSS is used to provide a modern and responsive interface.
 - Vite offers a fast development and build experience.
 - ESLint ensures code quality and consistency.
 
